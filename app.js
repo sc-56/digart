@@ -12,6 +12,10 @@ function build_application(port) {
     return app;
 };
 
+function connect_database() {
+    console.log();
+};
+
 port = 3000;
 app = build_application(port);
 app.listen(port, () => {

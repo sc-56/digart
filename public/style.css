@@ -1,8 +1,9 @@
 #textarea {
     width: 50%;
     height: 100px;
-    margin-top: 230px;
+    margin-top: 10px;
     border-radius: 3px;
     font-size: 13px;
+    font-family: 'Arial';
 }
 
