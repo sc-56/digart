@@ -1,0 +1,76 @@
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    background-color: aliceblue;
+    padding: 10px;
+    /* border-bottom: 2px solid #0EB2FE; */
+    display: flex;
+    justify-content: space-between;
+}
+
+
+nav #logo {
+    display: flex;
+    justify-content: center;
+}
+
+nav #logo h3 {
+   display: inline-block; 
+   margin: 0;
+   padding: 0;
+   margin-left:5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 25% 70% 5%;
+    height: 90vh;
+}
+
+#container-catalogue {
+    border-right: 0.5px dashed;
+}
+
+#catalogue {
+    margin: 50px;
+}
+
+#article {
+    margin: 100px;
+}
+
+#content {
+    font-size: 14;
+}
+
+#footer {
+    width: 100%;
+    height:40;
+    background-color: aliceblue;
+}
+
+/*
+
+list-style means the point in front of the list item.
+
+display: flex; flex is kind of layout, which is defined by the display property. It is convenient to be applied for the responsive scenarios. 
+
+CSS follows the structure of Cascading, which defines element from abstract into the level of detailed.
+
+justify-content is one sub property under the display: flex; The value space-between means the first element and last element located cross over the whole parent element.  
+
+*/
