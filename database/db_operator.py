@@ -1,4 +1,3 @@
-import pandas as pd
 import sqlite3 
 import csv
 
@@ -15,49 +14,54 @@ value_insert = "INSERT into jpword (word, pronunciation, explanation) VALUES (?,
 delete_values = "DELETE FROM jpword;"
 # The question mark here works like one place holder for query. 
 
-def execute_statement(con, cur, statement):
-    print("###########")
-    cur.execute(statement)
-    print("The updated value:")
-    print(cur.fetchall())
-    con.commit()
+class Database_Operator:
 
-    print("The value of jpword:")
-    cur.execute("SELECT * FROM jpword;")
-    print(cur.fetchall())
+    def __init__(self, csv_file, db_file):
+        # super().__init__()
+        con = sqlite3.connect(db_file)
+        cur = con.cursor()
+        self.con, self.cur = con, cur
+        self.csv_file = csv_file
+        self.db_file = db_file
 
-    return cur.fetchall()
+    def execute_statement(self, statement):
+        print("###########")
+        self.cur.execute(statement)
+        print("The updated value:")
+        print(self.cur.fetchall())
+        self.con.commit()
 
-def connect_db(file):
-    # df = pd.read_csv(file) # ['word', ' pronunciation', ' explanation']
-    con = sqlite3.connect(file)
-    cur = con.cursor()
-    return con, cur
+        print("The value of jpword:")
+        self.cur.execute("SELECT * FROM jpword;")
+        print(self.cur.fetchall())
+        return self.cur.fetchall()
 
-def add_csv(csv_file, db_file, con, cur):
-    with open(csv_file) as file:
-        reader = csv.reader(file)
-        for row in reader:
-            word = row[0]
-            pronunce = row[1]
-            explain = row[2]
-            cur.execute(value_insert, (word, pronunce, explain))
-        con.commit()
-        print("Values have been added.")
+    def add_csv(self):
+        with open(self.csv_file) as file:
+            reader = csv.reader(file)
+            for row in reader:
+                word = row[0]
+                pronunce = row[1]
+                explain = row[2]
+                self.cur.execute(value_insert, (word, pronunce, explain))
+            self.con.commit()
+            print("Values have been added.")
 
 def main():
-    con, cur = connect_db("./jpword.db")
-    execute_statement(con, cur, delete_values)
-    # add_csv("./jpword.csv", "./jpword.db", con, cur)
+    do = Database_Operator("./jpword.csv", "./jpword.db")
     
 if __name__ == "__main__":
     main()
 
 '''
 
-
+## Use flask as backend to extract data from database. 
 
 ## Add CSV file into database
+
+The function in class always needs self parameter. 
+
+All the functionality here can be integrated as Database_Operator. 
 
 ### with statement in Python
 
