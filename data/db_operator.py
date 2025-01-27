@@ -27,13 +27,13 @@ class Database_Operator:
     def execute_statement(self, statement):
         print("###########")
         self.cur.execute(statement)
-        print("The updated value:")
-        print(self.cur.fetchall())
+        #print("The updated value:")
+        #print(self.cur.fetchall())
         self.con.commit()
 
-        print("The value of jpword:")
+        #print("The value of jpword:")
         self.cur.execute("SELECT * FROM jpword;")
-        print(self.cur.fetchall())
+        #print(self.cur.fetchall())
         return self.cur.fetchall()
 
     def add_csv(self):
