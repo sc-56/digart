@@ -89,6 +89,4 @@ The statement "PRAGMA" provides the list of columns.
 
 It seems that sqlite can totally be operated by python. 
 
-一转眼回家20天了；还有20天又可以离开这里了；我在家乡放弃了一切，同时找到了自己想做的事情。
-
 '''

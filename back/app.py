@@ -1,6 +1,6 @@
 import sys
 import os
-sys.path.append(os.path.abspath('/Users/apple/Documents/0-Programming/jpword/data'))
+sys.path.append(os.path.abspath('/Users/apple/Documents/0-Programming/digart/data'))
 
 # [ ] to-do: build simple flask application
 
@@ -24,7 +24,9 @@ def home():
 
 # Method here defines the verb type which including GET, POST, PUT and PATCH. GET means getting data from server. POST means submitting data to the server. PUT means updating the resoource. PATCH means partically modifying the resource. DELETE is to delete one resource. 
 
-# The content can be transferred from database to API. Currently the data is displayed directly, if it should be applied on the HTML with dynamic functionality, 
+# The content can be transferred from database to API. Currently the data is displayed directly, if it should be applied on the HTML with dynamic functionality, Javascript should be applied. 
+
+# The new idea about this is to build one article about digital art using the previous idea of the note. This is one web application about the knowledge and experience of digital art. It is similar with writting one book. 
 
 if __name__ == "__main__":
     app.run(debug=True)
