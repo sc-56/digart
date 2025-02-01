@@ -23,7 +23,10 @@ Everything is within the element of root. Therefore, they are allocated in the m
 
 This is probability because that the setting in "index.css"; This is becuase of the setting in "index.css" -> body component. There is one setting named "place-items: center;", which could center both "align-items" and "justify-items" at same time. Therefore, the component is at the center of screen. 
 
-done: The navigator has been added as one component using the 
+done: The navigator has been added as one component using the component. 
 
+to-do: Add the left and right layout of Article and Catelogue. Yes, we name one as Catelogue and the other is Article. 
+
+It seems that the two component forms one larger component. 
 
 */
