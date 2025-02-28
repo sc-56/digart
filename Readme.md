@@ -1,5 +1,1 @@
-This project is for one Japanese Language word review application. 
-
-Database ->  SQLLite.
-Backend  ->  Flask.
-Frontend ->  React. 
+This project is one simple information management project using React, Flask and SQLite.
