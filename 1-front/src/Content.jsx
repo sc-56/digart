@@ -1,5 +1,5 @@
 import './Content.css'
-import './Catelogue.jsx'
+import './Catelogue.js'
 import './Article.jsx'
 
 function Content() {
