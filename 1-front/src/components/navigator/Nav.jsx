@@ -1,7 +1,6 @@
 import "./Nav.css"
 
 function Navigator() {
-
     return (
         <>
             <nav class="navbar">
@@ -12,9 +11,3 @@ function Navigator() {
 }
 
 export default Navigator
-
-/*
-
-The returned value is one object or JSX when using return (). It could be defined that XML is equal to object to some degree. 
-
-*/
