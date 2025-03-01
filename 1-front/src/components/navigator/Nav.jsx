@@ -1,13 +1,8 @@
 import "./Nav.css"
+import Image from "/Users/apple/Documents/0-Programming/digart/1-front/public/logs.svg";
 
-function Navigator() {
-    return (
-        <>
-            <nav class="navbar">
-                <span id="title">DigArt</span><span id="sub-title"> : Nonexistent road exists in the world of digital art. </span>
-            </nav>
-        </>
-    )
-}
+const Navigator = () => {
+    return <img src={Image} alt="Description" width="300" />
+};
 
-export default Navigator
+export default Navigator;

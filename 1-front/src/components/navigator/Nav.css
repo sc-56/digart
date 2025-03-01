@@ -1,13 +1,27 @@
 .navbar {
-    /*display: flex;*/
+    display: flex;
+    gap: 10px;
     background: #ffffff;
     padding: 20px 40px;
 }
 
-#title {
-    font: Inter;
-    font-size: 27px;
+#container {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+#title_1 {
+    padding: 0px;
+    margin-bottom: 3px;
+    font-size: 30px;
     font-weight: bold;
+}
+
+#title_2 {
+    padding: 0px;
+    font-size: 16px;
+    margin-top: 0px;
 }
 
 #sub-title {
